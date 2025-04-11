@@ -3,7 +3,7 @@ import { Qlearning } from "./Qlearning-web.js";
 let game = new Game();
 let ai = new Qlearning();
 ai.epsilon = 0.001;
-let res = await fetch('/TicTacToe.pkl');
+let res = await fetch('https://raw.githubusercontent.com/Xcatgit0/TICTACTOEai/main/TicTacToe.pkl');
 let BufferQ = await res.arrayBuffer();
 let Qstring = new TextDecoder().decode(BufferQ);
 let turn = 'X';
