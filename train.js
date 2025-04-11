@@ -57,11 +57,11 @@ function train(ai, episodes = 40000, ai2) {
 let ai = new Qlearning();
 let ai2 = new Qlearning();
 ai.loadQ();
-ai.epsilon = 0.001;
+ai.epsilon = 0.1;
 ai2.epsilon = 2;
 let beforeQ = Number(ai.q.size);
 console.time();
-train(ai, 120000, ai2);
+train(ai, 150000, ai2);
 let afterQ = ai.q.size;
 console.log(JSON.stringify(Array.from(ai.q)));
 console.log(beforeQ + ' > ' + afterQ);
